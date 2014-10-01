@@ -26,12 +26,12 @@
 			</tr>
 			<tr>
 				<td>購入日時</td>
-				<td><?php echo h(date('Y年n月j日', strtotime($this->data['SoftwareLicense']['purchase_date']))); ?>
+				<td><?php echo ($this->data['SoftwareLicense']['purchase_date']==0) ? '(未入力)' : h(date('Y年n月j日', strtotime($this->data['SoftwareLicense']['purchase_date']))); ?>
 					&nbsp;</td>
 			</tr>
 			<tr>
 				<td>有効期限</td>
-				<td><?php echo h(date('Y年n月j日', strtotime($this->data['SoftwareLicense']['term']))); ?>
+				<td><?php echo ($this->data['SoftwareLicense']['term']==0) ? '(未入力)' : h(date('Y年n月j日', strtotime($this->data['SoftwareLicense']['term']))); ?>
 					&nbsp;</td>
 			</tr>
 			<tr>

@@ -12,7 +12,7 @@
 	<tr>
 		</td>
 		<td><?php echo h($data['SoftwareLicense']['name']) ?></td>
-		<td><?php echo h(date('Y年n月j日', strtotime($data['SoftwareLicense']['purchase_date']))) ?>
+		<td><?php echo ($data['SoftwareLicense']['purchase_date']==0) ? '(未入力)' : h(date('Y年n月j日', strtotime($data['SoftwareLicense']['purchase_date']))) ?>
 		</td>
 		<td style="text-align: right"><?php echo h($data['SoftwareLicense']['installed']) ?>
 		</td>
