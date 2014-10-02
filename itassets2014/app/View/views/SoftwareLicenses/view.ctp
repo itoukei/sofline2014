@@ -127,8 +127,8 @@
 			<td margin="left" class="actions"><?php  ?>
 				<?php
 				if(AuthComponent::user('authority_level') >= 3 || AuthComponent::user('id') == $data['ManageInformation']['user_id']){
-					echo $this->Html->link('編集', array('controller' => 'ManageInformation', 'action' => 'edit', $data['ManageInformation']['id']));
-					echo $this->Form->postLink('削除', array('controller' => 'ManageInformation', 'action' => 'delete', $data['ManageInformation']['id']), null, '本当に削除しますか？');
+					echo $this->Html->link('編集', array('controller' => 'ManageInformations', 'action' => 'edit', $data['ManageInformation']['id']));
+					echo $this->Form->postLink('削除', array('controller' => 'ManageInformations', 'action' => 'delete', $data['ManageInformation']['id']), null, '本当に削除しますか？');
 				}
 				?>
 			</td>
