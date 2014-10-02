@@ -34,7 +34,7 @@ class ManageInformationsController extends AppController{
 			if(!$this->ManageInformation->exists($id)) throw new NotFoundException("不正な情報です。");
 			$this->Transition->clearData();
 		}
-		$this->request->data = $this->ManageInformation->findById();
+		$this->request->data = $this->ManageInformation->findById($id);
 		$this->render('input');
 
 	}
